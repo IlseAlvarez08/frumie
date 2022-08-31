@@ -18,7 +18,7 @@ export default function InicioComponent({navigation}) {
                     <View style={styles.view3}>
                         <TouchableWithoutFeedback  onPress={ () => cambiar()}>
                             <View  style={styles.btnInicio}>
-                                <Text style={styles.text1}>INICIO</Text>
+                                <Text style={styles.text1}>INICIOOE</Text>
                             </View>
                         </TouchableWithoutFeedback>
                     </View>
