@@ -21,27 +21,27 @@ export default function BarraComponent({navigation}) {
         <View style={styles.view1}>
           <View style={styles.viewBtnsU}>
               <View style={styles.viewBtns}>
-                      <TouchableWithoutFeedback style={{width:50, height:5}} onPress={ () => cambiar()}>
+                      <TouchableWithoutFeedback style={{ height:5}} onPress={ () => cambiar()}>
                           <Entypo name="home" size={30} color="#510094" style={{ alignSelf:'center', paddingTop:10 }}/>
                       </TouchableWithoutFeedback>
                   </View>
                   <View style={styles.viewBtns}>
-                      <TouchableWithoutFeedback style={{width:50, height:5}} onPress={ () => ubicacion()}>
+                      <TouchableWithoutFeedback style={{ height:5}} onPress={ () => ubicacion()}>
                           <Entypo name="location-pin" size={40} color="#510094" style={{ alignSelf:'center', paddingTop:5 }}/>
                       </TouchableWithoutFeedback>
                   </View>
                   <View style={styles.viewBtns}>
-                      <TouchableWithoutFeedback style={{width:50, height:5}}>
+                      <TouchableWithoutFeedback style={{ height:5}}>
                           <AntDesign name="heart" size={30} color="#510094" style={{ alignSelf:'center', paddingTop:10 }}/>
                       </TouchableWithoutFeedback>
                   </View>
                   <View style={styles.viewBtns}>
-                      <TouchableWithoutFeedback style={{width:50, height:5}}>
+                      <TouchableWithoutFeedback style={{ height:5}}>
                           <Ionicons name="notifications" size={30} color="#510094" style={{ alignSelf:'center', paddingTop:10 }}/>
                       </TouchableWithoutFeedback>
                   </View>
                   <View style={styles.viewBtns}>
-                      <TouchableWithoutFeedback style={{width:50, height:5}}>
+                      <TouchableWithoutFeedback style={{ height:5}}>
                           <Ionicons name="options" size={30} color="#510094" style={{ alignSelf:'center', paddingTop:10 }}/>
                       </TouchableWithoutFeedback>
                   </View>
@@ -54,11 +54,12 @@ export default function BarraComponent({navigation}) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      width:"90%",
+      alignSelf:'center',
       backgroundColor: '#fff',
     },
     view1:{
-      flex:1,
-      width:510,
+      width:"90%",
       height: 50,
       paddingLeft:30,
       paddingRight:30,
@@ -66,24 +67,23 @@ const styles = StyleSheet.create({
       flexDirection:'row',
       position:'absolute',
       bottom:25,
-      marginleft:100,
       borderRadius:20,
       alignSelf:'center', 
-      alignContent:'center'
+      alignItems:'center',
+      justifyContent:'center'
     },
     viewBtns:{
+      flex:1,
       height:50,
-      width:50,
-      alignSelf:'center',
+
     },
     viewBtnsU:{
       height:50,
-      width:470,
-      right:20,
-      alignSelf:'center',  
+      flex:1,
+      width:"100%", 
       position:'absolute',   
       justifyContent:'space-between',
-      flexDirection:'row'
+      flexDirection:'row',
     }
     
   });
