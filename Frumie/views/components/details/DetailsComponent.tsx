@@ -98,35 +98,40 @@ const foto4 = ()=>{
       margin:20,
       height:320,
       justifyContent: "center",
-      padding: 25
+      padding: 25,
     },
     view: {
+      flex:1,
+      height:"100%",
       flexDirection: "row",
       justifyContent: 'space-between',
-      marginTop:0,
-
+      
     },
     view2: {
+      flex:1,
+      width:"50%",
       flexDirection: "column",
       justifyContent: 'space-between',
-      
       marginTop: 0
     },
     view3: {
       paddingTop:0,
       paddingBottom: 0,
       width:50,
+      
     },
     view4: {
-      paddingTop:150
+      paddingTop:150,
     },
     view5: {
       paddingBottom:10,
-      borderRadius: 25
+      borderRadius: 25,
+      
     },
     view6:{
     paddingBottom:30,
-    borderRadius: 25
+    borderRadius: 25,
+    
     },
     imageCora:{
       height: 50,

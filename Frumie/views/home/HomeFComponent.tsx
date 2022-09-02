@@ -20,7 +20,6 @@ export default function HomeFComponent({navigation}) {
         <HeaderComponent navigation={navigation} />
         <SearchComponent/>
           <ScrollView>
-            <Text style={{ color: "black", fontSize: 40, fontWeight: "bold", textAlign: "center"}}>HOLA ARRENDADOR</Text>
             <HouseItem navigation={navigation} url={"https://grijalvaromero.deskode.com/frumie/fachada.png"} />
             <RoomieComponent navigation={navigation} url={"https://buscoroomie.cl/media/blog/pictures/COMPARTIR.jpg"} />
             <HouseItem navigation={navigation}url={"https://grijalvaromero.deskode.com/frumie/fachada_bw.png"} />

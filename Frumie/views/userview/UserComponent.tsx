@@ -30,8 +30,7 @@ export default function UserComponent ({navigation}){
                 <View style={styles.viewcarga}>
                 <Image source={{ uri:'https://grijalvaromero.deskode.com/frumie/progress.png' }} 
                   style={{ width:200, height:200, paddingBottom: 50,}}/>
-                  <View style={{flex:1, backgroundColor:'red', width:200, height:50, borderRadius:5}}></View>
-             
+ 
                 </View>
                 <View style={styles.view2}>
                     <Text style={styles.text1}>Calle Juárez #2500</Text>
@@ -42,7 +41,7 @@ export default function UserComponent ({navigation}){
             <View style={styles.viewBtn}>
               <View style={styles.viewRentar}>
               <TouchableWithoutFeedback style={styles.btnRentar} onPress={ ()=> cambiar() }>
-                    <View style={{height: 50,width: 480,}}>
+                    <View style={{height: 50,width:"100%",}}>
                       <Text style={{color: "white", fontSize: 28, textAlign: "center", paddingTop:5, fontWeight:'bold'}}>Rentar</Text>         
                     </View>
                   </TouchableWithoutFeedback>
@@ -213,11 +212,14 @@ const styles = StyleSheet.create({
       alignContent:'center'
     },
     view2:{
-        padding:50
+      flex:1,
+        padding:50, 
+        width:"100%"
     },
     viewcarga:{
+      flex:1,
       height:200,
-      width:200,
+      width:"100%",
       alignSelf:'center',
       alignContent:'center',
     },
@@ -246,7 +248,7 @@ const styles = StyleSheet.create({
       },
       text3:{
       color: "black",
-      fontSize: 35,
+      fontSize: 22,
       fontWeight: "bold",
       textAlign: "center",
       textAlignVertical: "center",
@@ -275,16 +277,11 @@ const styles = StyleSheet.create({
             textAlignVertical: "center",
             paddingLeft: 4
             },
-      btnRentar:{
-        height: 50,
-        width: 400,
-        borderRadius:8,
-        flex:2,
-        textAlign:'center'
-    },
     viewRentar:{
+      flex:1,
       height: 50,
-      width: 480,
+      width: "50%",
+      alignSelf:'center',
       borderRadius:8, 
       backgroundColor:'#510094',
       alignContent:'center',
@@ -296,7 +293,7 @@ const styles = StyleSheet.create({
     height:120,
     flexDirection:'column',
     top: 360,
-    left: 50
+    left: 50,
   },
   viewPagos:{
     width: 480,

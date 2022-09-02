@@ -50,7 +50,7 @@ export default function RoomieDetailsComponent({navigation}) {
       </TouchableWithoutFeedback>
       </View>
       <View style={styles.viewInfo}>
-
+          <View style={styles.nombre}></View>
     </View>
 
       </ScrollView>
@@ -87,7 +87,7 @@ export default function RoomieDetailsComponent({navigation}) {
     },
     view2: {
       flexDirection: "column",
-      justifyContent: 'space-between',
+      justifyContent:'flex-start',
       marginTop: 0,
     },
     view3: {
@@ -99,22 +99,35 @@ export default function RoomieDetailsComponent({navigation}) {
       width:200,
       height:200,  
       marginTop:120,
-      marginLeft:150,
       alignContent:'center',
       borderRadius:200,
       borderColor:'white',
       borderWidth:5,
+      alignSelf:'center',
     },
     view5: {
       paddingBottom:10,
       borderRadius: 25
     },
     viewInfo:{
+      flex:1,
+      alignSelf:'center',
+      flexDirection:'column',
         height:500,
+        width:"88%",
         margin:20,
         marginTop:70,
         borderRadius:25,
         backgroundColor:'white',
+    },
+    nombre:{
+      flex:1,
+      alignSelf:'center',
+      flexDirection:'column',
+        height:100,
+        width:"90%",
+        margin:20,
+        backgroundColor:'red',
     },
     btnPerfil:{
         width:190,

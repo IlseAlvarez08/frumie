@@ -44,7 +44,7 @@ export default function DetailsComponent2({navigation}) {
         </View>
         </View>
         <View style={styles.viewinfotext}>
-        <Text style={{color: "black", fontSize: 22, textAlign: "left"}}>
+        <Text style={{color: "black", fontSize: 22, textAlign: "justify"}}>
             La ubicación de la casa es céntrica, cuenta con patio grande, espacio para mascota, cochera,y sala de juegos
                 <TouchableWithoutFeedback style={{ backgroundColor: 'red', width:30, height:30 }}>
                     <Text style={{color: "#eaff00", fontWeight:'bold', fontSize: 22, textAlign: "left", paddingLeft: 5}}>Ver mas...</Text>
@@ -378,12 +378,11 @@ export default function DetailsComponent2({navigation}) {
       color: "black",
       fontSize: 20,
       textAlign: "left",
-      paddingLeft: 5
+
     },
     imageBtn: {
       height: 50,
       width: 50,
-      backgroundColor: 'red',
       marginEnd: 10,
     },
     btnRegreso: {
@@ -392,17 +391,22 @@ export default function DetailsComponent2({navigation}) {
       paddingBottom:100
     },
     viewinfo:{
-      height: 50,
+      flex:1,
+      height:"50%",
+      width:"100%",
       padding:30,
       paddingTop:0,
       flexDirection: "row",
       justifyContent: 'space-between',
-      alignContent:'center',
+      alignContent:'center', 
     },
     viewinfo2:{
       flexDirection: "row",
-      justifyContent: 'space-between',
       alignContent:'center',
+      alignItems:'center',
+      flex:1,
+      height:"50%",
+      width:"20%",
 
     },
     viewinfo3:{
