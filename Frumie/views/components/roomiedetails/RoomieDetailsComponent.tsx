@@ -15,13 +15,19 @@ export default function RoomieDetailsComponent({navigation}) {
     navigation.navigate('HomeF')
     } 
     const cambiar2 = ()=>{
-        navigation.navigate('Foto4')
-        } 
+        navigation.navigate('Foto1')
+    }
+    const cambiar3 = ()=>{
+      navigation.navigate('FotoRoomie')
+    } 
+    const ubicacion = ()=>{
+      navigation.navigate('ubicacion')
+    }
 
 
     return (
       <View style={styles.container}>
-        <ScrollView style={{height: windowHeight-50}}>
+        <ScrollView>
             <View>
         <TouchableWithoutFeedback onPress={ ()=> cambiar2() }>
         <ImageBackground 
@@ -36,7 +42,7 @@ export default function RoomieDetailsComponent({navigation}) {
                         </TouchableWithoutFeedback>
                     </View>
                     <View style={styles.view4}>
-                        <TouchableWithoutFeedback style={styles.btnPerfil}>
+                        <TouchableWithoutFeedback style={styles.btnPerfil} onPress={ ()=> cambiar3() }>
                             <ImageBackground
                                 source={{uri: 'https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg'}}
                                 resizeMode="cover" style={styles.imagePerfil} imageStyle={{ borderRadius:190 }}
@@ -50,7 +56,45 @@ export default function RoomieDetailsComponent({navigation}) {
       </TouchableWithoutFeedback>
       </View>
       <View style={styles.viewInfo}>
-          <View style={styles.nombre}></View>
+          <View style={styles.infoUsuario}>
+          <Text style={{color: "black", fontSize: 30, textAlign: "center", fontWeight:'bold'}}>
+              Esmeralda Vega Salazar
+          </Text>
+            <Text style={{color: "black", fontSize: 22, textAlign: "justify"}}>
+              21 años<br/>
+              Me gusta hacer deporte<br/>
+              Estudio en el ITSNCG en el turno vespertino<br/>
+          </Text>
+        </View>
+        <View style={styles.infoCasa}>
+          <Text style={{color: "black", fontSize: 22, textAlign: "justify"}}>
+              La casa cuenta con 3 cuartos, 2 baños completos, 1 sala, 1 cocina, 1 comedor y patio grande<br/>
+              La casa esta semiamueblada<br/>
+              Se encuentra cerca del parque central
+          </Text>
+        </View>
+        <View style={styles.direccion}>
+          <Text style={{color: "black", fontSize: 22, textAlign: "center"}}>
+                Av. Benito Juárez y 16 de Septiembre s/n
+            </Text>
+          <TouchableWithoutFeedback style={styles.imageubi} onPress={ ()=> ubicacion() }>
+              <Image source={{ uri:'https://img.freepik.com/vector-gratis/navegacion-aplicacion-hay-destino-llegar-al-mapa-gps-destino_403715-36.jpg?w=2000' }} 
+              style={{ height:200, resizeMode:'cover', borderRadius: 12 }}/>           
+          </TouchableWithoutFeedback>
+
+        </View>
+        <View style={styles.fotos}>
+          <ScrollView style={styles.scrollHorizontal}>
+
+          </ScrollView>
+
+        </View>
+        <View style={styles.roomie}>
+
+        </View>
+        <View style={styles.contactar}>
+
+        </View>
     </View>
 
       </ScrollView>
@@ -113,21 +157,66 @@ export default function RoomieDetailsComponent({navigation}) {
       flex:1,
       alignSelf:'center',
       flexDirection:'column',
-        height:500,
-        width:"88%",
-        margin:20,
-        marginTop:70,
-        borderRadius:25,
-        backgroundColor:'white',
+      width:"88%",
+      height:"100%",
+      margin:20,
+      marginTop:70,
+      borderRadius:25,
+      backgroundColor:'white',
     },
-    nombre:{
+    infoUsuario:{
       flex:1,
       alignSelf:'center',
       flexDirection:'column',
-        height:100,
-        width:"90%",
-        margin:20,
-        backgroundColor:'red',
+      height:300,
+      width:"90%",
+      margin:20,
+      backgroundColor:'blue',
+    },
+    infoCasa:{
+      flex:1,
+      alignSelf:'center',
+      flexDirection:'column',
+      height:300,
+      width:"90%",
+      margin:20,
+      backgroundColor:'red'
+    },
+    direccion:{
+      flex:1,
+      alignSelf:'center',
+      flexDirection:'column',
+      height:400,
+      width:"90%",
+      margin:20,
+      backgroundColor:'red',
+    },    
+    fotos:{
+      flex:1,
+      alignSelf:'center',
+      flexDirection:'column',
+      height:300,
+      width:"90%",
+      margin:20,
+      backgroundColor:'red',
+    },
+    roomie:{
+      flex:1,
+      alignSelf:'center',
+      flexDirection:'column',
+      height:300,
+      width:"90%",
+      margin:20,
+      backgroundColor:'red',
+    },
+    contactar:{
+      flex:1,
+      alignSelf:'center',
+      flexDirection:'column',
+      height:80,
+      width:"90%",
+      margin:20,
+      backgroundColor:'red',
     },
     btnPerfil:{
         width:190,
@@ -240,6 +329,11 @@ export default function RoomieDetailsComponent({navigation}) {
       position:'absolute',   
       justifyContent:'space-between',
       flexDirection:'row'
+    },
+    scrollHorizontal:{
+      flex:1,
+      height:"100%",
+      
     }
 
     })

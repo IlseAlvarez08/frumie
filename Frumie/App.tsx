@@ -8,6 +8,7 @@ import HeaderComponent from './views/layouts/header/HeaderComponent';
 import GpsComponent from './views/components/gps/GpsComponent';
 import DetailsComponent from './views/components/details/DetailsComponent';
 import RoomieDetailsComponent from './views/components/roomiedetails/RoomieDetailsComponent';
+import FotoRoomie from './views/components/roomiedetails/FotoRoomie';
 import Foto1 from './views/components/details/Foto1';
 import Foto3 from './views/components/details/Foto3';
 import Foto2 from './views/components/details/Foto2';
@@ -110,6 +111,13 @@ export default function App() {
             headerTitleStyle:{
               fontWeight:'bold'
             }
+          }}
+        />
+        <Stack.Screen 
+          name='FotoRoomie'
+          component={FotoRoomie}
+          options={{
+            headerShown:false
           }}
         />
         <Stack.Screen 
