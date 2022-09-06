@@ -2,186 +2,43 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeComponent from './views/home/HomeFComponent';
-import UserComponent from './views/userview/UserComponent';
-import HeaderComponent from './views/layouts/header/HeaderComponent';
-import GpsComponent from './views/components/gps/GpsComponent';
-import DetailsComponent from './views/components/details/DetailsComponent';
-import RoomieDetailsComponent from './views/components/roomiedetails/RoomieDetailsComponent';
-import FotoRoomie from './views/components/roomiedetails/FotoRoomie';
-import Foto1 from './views/components/details/Foto1';
-import Foto3 from './views/components/details/Foto3';
-import Foto2 from './views/components/details/Foto2';
-import Foto4 from './views/components/details/Foto 4';
-import InicioComponent from './views/components/inicio/InicioComponent';
-import ComoComponent from './views/components/inicio/ComoComponent';
-import LoginAComponent from './views/components/inicio/LoginAComponent';
-import LoginFComponent from './views/components/inicio/LoginFComponent';
-import HomeFComponent from './views/home/HomeFComponent';
-import HomeAComponent from './views/home/HomeAComponent';
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-
+import HomeComponent from './app/home/HomeComponent';
+import MapComponent from './app/map/MapComponent';
+import FavsComponent from './app/favs/FavsComponent';
+import NotiComponent from './app/notifications/NotiComponent';
+import SettingsComponent from './app/settings/SettingsComponent';
+import LoginComponent from './app/auth/LoginComponent';
+import HouseDetailsComponent from './app/details/HouseDetailsCompoent';
+import AdminComponent from './app/admin/admin/AdminComponent';
+import GalleryComponent from './app/details/GalleryComponent';
+import RoomieDetailsComponent from './app/details/RoomieDetails';
+import ProfileComponent from './app/profile/ProfileComponent';
+import HomeRoutesComponent from './app/home/HomeRoutesComponent';
+import HomeStackComponent from './app/home/HomeStackComponent';
+import RegisterComponent from './app/auth/RegisterComponent';
 const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    
+    // https://reactnativeelements.com/docs/components/button
+    //https://reactnativeelements.com/docs/installation#stable
+   
     <NavigationContainer>
-      <Stack.Navigator>
-      <Stack.Screen 
-          name='Inicio'
-          component={InicioComponent}
-          options={{
-            title:"Frumie",
-            headerShown: false,
-            headerStyle:{
-              backgroundColor: '#f4511e'
-            }
-          }}
-        />
-        
-        <Stack.Screen 
-          name="HomeF" 
-          component={HomeFComponent}
-          options={{
-            title:'Bienvenidos',
-            headerShown: false
-          }}
-        />
-        <Stack.Screen 
-          name="HomeA" 
-          component={HomeAComponent}
-          options={{
-            title:'Bienvenidos',
-            headerShown: false
-          }}
-        />
-        <Stack.Screen 
-          name="LoginF" 
-          component={LoginFComponent}
-          options={{
-            title:'Bienvenidos',
-            headerShown: false
-          }}
-        />
-        <Stack.Screen 
-          name="LoginA" 
-          component={LoginAComponent}
-          options={{
-            title:'Bienvenidos',
-            headerShown: false
-          }}
-        />
-        <Stack.Screen 
-          name="How" 
-          component={ComoComponent}
-          options={{
-            title:'Frumie',
-            headerShown: false
-          }}
-        />
-        
-        <Stack.Screen 
-          name='Details'
-          component={DetailsComponent}
-          options={{
-            title:"MarvelApp",
-            headerShown: false,
-            headerStyle:{
-              backgroundColor: '#f4511e'
-            },
-            headerTintColor: '#FFF',
-            headerTitleStyle:{
-              fontWeight:'bold'
-            }
-          }}
-        />
-        <Stack.Screen 
-          name='RoomieDetails'
-          component={RoomieDetailsComponent}
-          options={{
-            title:"MarvelApp",
-            headerShown: false,
-            headerStyle:{
-              backgroundColor: '#f4511e'
-            },
-            headerTintColor: '#FFF',
-            headerTitleStyle:{
-              fontWeight:'bold'
-            }
-          }}
-        />
-        <Stack.Screen 
-          name='FotoRoomie'
-          component={FotoRoomie}
-          options={{
-            headerShown:false
-          }}
-        />
-        <Stack.Screen 
-          name='Foto1'
-          component={Foto1}
-          options={{
-            headerShown:false
-          }}
-        />
-        <Stack.Screen 
-          name='Foto2'
-          component={Foto2}
-          options={{
-            headerShown:false
-          }}
-        />
-        <Stack.Screen 
-          name='Foto3'
-          component={Foto3}
-          options={{
-            headerShown:false
-          }}
-        />
-        <Stack.Screen 
-          name='Foto4'
-          component={Foto4}
-          options={{
-            headerShown:false
-          }}
-        />
-        <Stack.Screen 
-        name='UserView'
-        component={UserComponent}
-        options={{
-          title:"user",
-          headerShown: false,
-          headerStyle:{
-            backgroundColor: '#f4511e'
-          },
-          headerTintColor: '#FFF',
-          headerTitleStyle:{
-            fontWeight:'bold'
-          }
-        }}
-        />
-        <Stack.Screen 
-        name='Ubicacion'
-        component={GpsComponent}
-        options={{
-          title:"Ubicacion",
-          headerShown: false,
-          headerStyle:{
-            backgroundColor: '#f4511e'
-          },
-          headerTintColor: '#FFF',
-          headerTitleStyle:{
-            fontWeight:'bold'
-          }
-        }}
-        />
-        
+          <Stack.Navigator>
+            
+            <Stack.Screen name='Login' component={LoginComponent}  options={{title:"Login",headerShown: false,}} />
+            <Stack.Screen name='Register' component={RegisterComponent}  options={{title:"Login",headerShown: false,}} />
+          
+            {/* PESTANAS */}
+            <Stack.Screen name='HomeRoutes' component={HomeRoutesComponent}  options={{title:"Login",headerShown: false,}} />
+            <Stack.Screen name='AdminView' component={AdminComponent}  options={{title:"Admin",headerShown: false,}} />
+            
+           
+          </Stack.Navigator>
+         
 
-
-      </Stack.Navigator>
+      
     </NavigationContainer>
     );
   }
